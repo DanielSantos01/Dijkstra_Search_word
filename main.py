@@ -2,7 +2,7 @@ from data_handler import get_data
 from node import Node, List
 
 
-def main():
+def main(source, target):
     data = get_data()
     nodes = []
     for node in data['nodes']:
@@ -14,9 +14,4 @@ def main():
         source.link_to(target)
 
     graph = List(nodes)
-    
-    print(graph.find_connection_label('man', 'agreeable'))
-
-
-if __name__ == '__main__':
-    main()
+    print(graph.find_connection_label(source, target))
