@@ -6,6 +6,6 @@ class HandleGetWayViewSet(viewsets.ViewSet):
   # POST
   def create(self, request):
     body = request.POST.dict()
-    resp = main(body['source'], body['target'])
+    resp = main(body['sourceValue'], body['targetValue'])
     return Response(resp, status=200)
 
