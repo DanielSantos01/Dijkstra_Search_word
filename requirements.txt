@@ -1,0 +1,6 @@
+psycopg2-binary==2.9.1
+Django==3.2.4
+djangorestframework
+dnspython==2.1.0
+gunicorn
+django-heroku
