@@ -2,7 +2,7 @@ from data_handler import get_data
 from node import Node, List
 
 
-def main(source, target):
+def main(src, tgt):
     data = get_data()
     nodes = []
     for node in data['nodes']:
@@ -14,4 +14,4 @@ def main(source, target):
         source.link_to(target)
 
     graph = List(nodes)
-    print(graph.find_connection_label(source, target))
+    return graph.find_connection_label(src, tgt)
