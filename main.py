@@ -14,7 +14,8 @@ def main():
         source.link_to(target)
 
     graph = List(nodes)
-    print(graph.find_connection(0, 15))
+    
+    print(graph.find_connection_label('man', 'agreeable'))
 
 
 if __name__ == '__main__':

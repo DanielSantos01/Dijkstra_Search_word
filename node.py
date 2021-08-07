@@ -92,3 +92,42 @@ class List:
             last_vertex = self.before[last_vertex]
 
         return resp
+    
+    def search_word(self, word):
+        node = None
+        
+        count = 0
+        while count < len(self.list) - 1 and node == None:
+            if self.list[count].label == word:
+                node = self.list[count]
+                
+            count += 1
+                
+        return node
+    
+    def find_by_id(self, id):
+        node = None
+        
+        count = 0
+        while count < len(self.list) - 1 and node == None:
+            if self.list[count].id == id:
+                node = self.list[count]
+                
+            count += 1
+                
+        return node
+
+    def find_connection_label(self, word_1, word_2):
+        word_1 = self.search_word(word_1)
+        word_2 = self.search_word(word_2)
+        
+        if word_1 == None or word_2 == None:
+            return []
+        
+        connections = self.find_connection(word_1.id, word_2.id)
+        
+        connections_label = []
+        for id in connections:
+            connections_label.append(self.find_by_id(id).label)
+        
+        return connections_label
