@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
-class NotifierConfig(AppConfig):
+class SearcherConfig(AppConfig):
   default_auto_field = 'django.db.models.BigAutoField'
-  name = 'notifier'
+  name = 'searcher'

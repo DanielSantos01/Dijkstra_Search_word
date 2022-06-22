@@ -1,1 +1,1 @@
-web: gunicorn django_notifier.wsgi
+web: gunicorn src/services/api/manage.py

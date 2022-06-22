@@ -10,7 +10,7 @@ DEBUG: bool = True
 ALLOWED_HOSTS: list = []
 
 INSTALLED_APPS: list = [
-  'notifier.apps.NotifierConfig',
+  'searcher.apps.SearcherConfig',
   'django.contrib.admin',
   'django.contrib.auth',
   'django.contrib.contenttypes',
@@ -30,7 +30,7 @@ MIDDLEWARE: list = [
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF: str= 'django_notifier.urls'
+ROOT_URLCONF: str= 'searcher.urls'
 
 TEMPLATES: list = [
   {
@@ -48,7 +48,7 @@ TEMPLATES: list = [
   },
 ]
 
-WSGI_APPLICATION: str = 'django_notifier.wsgi.application'
+WSGI_APPLICATION: str = 'searcher.wsgi.application'
 
 DATABASES: dict = {
   'default': {
