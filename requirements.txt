@@ -4,3 +4,4 @@ djangorestframework
 dnspython==2.1.0
 gunicorn
 django-heroku
+jsonschema
